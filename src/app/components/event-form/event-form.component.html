@@ -1,0 +1,64 @@
+<div class="container mt-4">
+    <h2>{{ isEditMode ? 'Edit Event' : 'Create Event' }}</h2>
+    <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label>Title</label>
+        <input type="text" formControlName="title" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Description</label>
+        <textarea formControlName="description" class="form-control"></textarea>
+      </div>
+      <div class="mb-3">
+        <label>Start Date</label>
+        <input type="date" formControlName="startDate" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>End Date</label>
+        <input type="date" formControlName="endDate" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Location</label>
+        <input type="text" formControlName="location" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Image URL</label>
+        <input type="text" formControlName="imageUrl" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Registration Link</label>
+        <input type="text" formControlName="registrationLink" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Max Participants</label>
+        <input type="number" formControlName="maxParticipants" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Organizer</label>
+        <input type="text" formControlName="organizer" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Contact Email</label>
+        <input type="email" formControlName="contactEmail" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label>Contact Phone</label>
+        <input type="text" formControlName="contactPhone" class="form-control" />
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" formControlName="featured" />
+        <label class="form-check-label">Featured</label>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" formControlName="active" />
+        <label class="form-check-label">Active</label>
+      </div>
+      <div class="mb-3">
+        <label>Event Type</label>
+        <input type="text" formControlName="eventType" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">{{ isEditMode ? 'Update' : 'Create' }}</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,11 @@
+<div class="container mt-4">
+    <h2>Events</h2>
+    <div *ngFor="let event of events" class="card my-2">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.title }}</h5>
+        <p class="card-text">{{ event.description }}</p>
+        <a [routerLink]="['/event', event.id]" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+  
